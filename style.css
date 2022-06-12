@@ -1,0 +1,324 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+}
+body {
+    /* height: 100vh; */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #fff;
+
+}
+.container {
+  
+    display: flex;
+    flex-direction: column;
+    height: 1000px;
+    
+}
+.header {
+    display: flex;
+    justify-content: space-around;
+    height: 10%;
+    align-items: center;
+    background: #fff;
+
+}
+.logo {
+    display: flex;
+    flex-basis: 10%;
+    height:90px;
+    margin-left: 10px;
+}
+.logo img {
+    display: flex;
+    width: 100%;
+    min-width: 150px;
+    height: 100%;
+}
+.header-links {
+    flex-basis: 60%;
+    display: flex;
+    justify-content: space-around;
+}
+.header-links a {
+    color: #000;
+    font-size: 1vw;
+}
+.right-header {
+    display: flex;
+    flex-basis: 20%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.right-header i {
+    font-size: 1.7vw !important;}
+.search  {
+    display: flex;
+    width: 190px;
+    height: 30px;
+   
+}
+.search input {
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    border:none;
+    box-shadow: 1px 3px 7px #dedede;
+    padding-left: 45px;
+    caret-color:#dedede;
+    
+}
+
+.search input::placeholder{
+    color: #dedede;
+}
+
+
+.account {
+    display: flex;
+    flex-basis: 10%;
+    justify-content: space-around;
+}
+.account a {
+    color: #000;
+    padding: 15px;
+    font-size: 10px;
+}
+.content {
+    display: flex;
+    height: 90%;
+    background-color: wheat;
+    padding: 10px;
+}
+.left-side {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 20%;
+    gap: 15px;
+}
+.left-side .top-list {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 60%;
+    padding-left: 13px;
+    
+}
+.left-side .top-list ul {
+    list-style-type: none;
+    line-height: 30px;
+    cursor: pointer;
+
+}
+.down {
+    background-color: lightgoldenrodyellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    flex-basis: 20%;
+    height: 200px;
+}
+.left-side span {
+    opacity: 0.4;
+    line-height: 55px;
+}
+.left-side .top-list h2 {
+    text-decoration: underline gray;
+    display: flex;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 60%;
+    padding: 10px;
+    
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-basis: 40%;
+    gap: 10px;
+    
+    
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    min-width: 150px;
+    padding: 20px;
+
+    width: 23%;
+    height:280px;
+}
+
+.card img {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.card .name {
+    font-size: 12px;
+}
+
+.markalar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 40%;
+    justify-content: center;
+    gap: 40px;
+}
+.markalar  .marka  {
+    display: flex;
+    justify-content: space-around;
+    min-width: 150px;
+    width: 27%;
+    height: 140px;
+    gap: 10px;
+    
+   
+}
+.markalar p{
+    color: #1d272e;
+}
+.left-side h2 {
+    color: #1d272e;
+}
+.marka img {
+    width: 100%;
+    height: 100%;
+    background-color: papayawhip;
+}
+.markalar .marka-name {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2.0vw
+}
+.right {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    transform-style: preserve-3d;
+    display: flex;
+    flex-basis: 20%;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.right .box {
+    
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 2s ease-in-out;
+    backface-visibility: hidden;
+    transform: perspective(500px) rotateY(0deg);
+}
+
+.right .box.back img {
+    width: 100%;
+    height:100%;
+    
+}
+
+.right .box.back {
+    background: #dedede;
+    transform: perspective(500px) rotateY(180deg);
+    color: antiquewhite;
+}
+
+.right:hover .box.front {
+    transform: perspective(500px) rotateY(180deg);
+}
+.right .box h2 {
+    color: red;
+    font-weight: 600;
+}
+
+.right:hover .box.back {
+    transform: perspective(500px) rotateY(360deg);
+    
+}
+
+.footer {
+    background-color: gray;
+    display: flex;
+    justify-content: space-around;
+    height: 25vh;
+    padding: 10px;
+    font-size: 15px;
+    line-height: 1.8;
+    cursor: pointer;
+
+
+}
+.footer .basliq {
+    display: flex;
+    padding-bottom: 10px;
+    color: #1d272e;
+    }
+    .footer p {
+        color: #dedede;
+    }
+.d-none {
+    display: none;
+}
+
+@media(max-width:870px){
+    /* breakpoints */
+    .header-links {
+        display: none;
+    }
+
+    .d-none {
+        display: flex;
+        cursor: pointer;
+    }
+
+    .right {
+        display: none;
+    }
+
+    .main {
+        flex:1;
+    }
+    .down {
+        display: none;
+    }
+
+    .header {
+        justify-content: space-between;
+    }
+.marka {
+    flex-direction: column;
+}
+.marka img {
+    height: 90px;
+}
+.cards {
+    flex-basis: 30%;
+}
+.card {
+    height: 230px;
+}
+.card img {
+    height: 100%;
+}
+.footer {
+    line-height: 1.1;
+}
+}
